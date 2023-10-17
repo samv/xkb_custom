@@ -312,6 +312,7 @@
   symbolic        us: English (US, Symbolic)
   rus             us: Russian (US, phonetic)
   mac             us: English (Macintosh)
+  mac-hip         us: English (Macintosh with Sam Vilain's hip changes)
   altgr-intl      us: English (intl., with AltGr dead keys)
   olpc2           us: English (the divide/multiply toggle the layout)
   hbs             us: Serbo-Croatian (US)

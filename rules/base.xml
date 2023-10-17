@@ -1493,6 +1493,12 @@
         </variant>
         <variant>
           <configItem>
+            <name>mac-hip</name>
+            <description>English (Macintosh with Sam Vilain's hip changes)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>altgr-intl</name>
             <description>English (intl., with AltGr dead keys)</description>
             <languageList>
