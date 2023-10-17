@@ -1796,5 +1796,18 @@
         </configItem>
       </option>
     </group>
+    <group allowMultipleSelection="true">
+      <!-- Tweaking the position of escape -->
+      <configItem popularity="exotic">
+        <name>esc</name>
+        <description>Escape position</description>
+      </configItem>
+      <option>
+        <configItem popularity="exotic">
+          <name>esc:swap_tilde</name>
+          <description>Swap Escape with Tilde</description>
+        </configItem>
+      </option>
+    </group>
   </optionList>
 </xkbConfigRegistry>

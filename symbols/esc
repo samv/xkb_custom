@@ -1,0 +1,6 @@
+// swap parentheses and square brackets
+default partial
+xkb_symbols "swap_tilde" {
+    replace key <ESC> { [ grave, asciitilde, dead_grave, U262E ] };
+    replace key <TLDE> { [ Escape ] };
+};
