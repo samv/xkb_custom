@@ -1,0 +1,5 @@
+// swap parentheses and square brackets
+default partial
+xkb_symbols "screensaver" {
+    replace key <FK14> { [ XF86ScreenSaver ] };
+};

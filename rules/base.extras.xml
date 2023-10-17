@@ -1809,5 +1809,41 @@
         </configItem>
       </option>
     </group>
+    <group>
+      <configItem popularity="exotic">
+        <name>fk13</name>
+        <description>Function Key 13 behavior</description>
+      </configItem>
+      <option>
+        <configItem popularity="exotic">
+          <name>fk13:print</name>
+          <description>Make F13 a Print Screen button</description>
+        </configItem>
+      </option>
+    </group>
+    <group>
+      <configItem popularity="exotic">
+        <name>fk14</name>
+        <description>Function Key 14 behavior</description>
+      </configItem>
+      <option>
+        <configItem popularity="exotic">
+          <name>fk14:screensaver</name>
+          <description>Make F14 invoke the screen saver</description>
+        </configItem>
+      </option>
+    </group>
+    <group>
+      <configItem popularity="exotic">
+        <name>fk15</name>
+        <description>Function Key 15 behavior</description>
+      </configItem>
+      <option>
+        <configItem popularity="exotic">
+          <name>fk15:power</name>
+          <description>Make F15 a power control button</description>
+        </configItem>
+      </option>
+    </group>
   </optionList>
 </xkbConfigRegistry>

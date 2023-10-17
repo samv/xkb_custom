@@ -1133,6 +1133,9 @@
   lv5:rwin_switch_lock_cancel     =       +level5(rwin_switch_lock_cancel)
   parens:swap_brackets   =   +parens(swap_brackets)
   esc:swap_tilde   =   +esc(swap_tilde)
+  fk13:print   =   +fk13(print)
+  fk14:screensaver   =   +fk14(screensaver)
+  fk15:power   =   +fk15(power)
 
 
 ! option		=	compat

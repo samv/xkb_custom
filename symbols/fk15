@@ -1,0 +1,5 @@
+// swap parentheses and square brackets
+default partial
+xkb_symbols "power" {
+    replace key <FK15> { [ XF86Standby, XF86Sleep, XF86Hibernate, XF86PowerOff ] };
+};

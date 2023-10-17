@@ -1,0 +1,5 @@
+// swap parentheses and square brackets
+default partial
+xkb_symbols "print" {
+    replace key <FK13> { [ Print ] };
+};
