@@ -8264,5 +8264,43 @@
         </configItem>
       </option>
     </group>
+    <group allowMultipleSelection="true">
+	  <!-- remapping escape -->
+      <configItem>
+        <name>esc</name>
+        <description>Escape key position</description>
+      </configItem>
+      <option>
+        <configItem>
+          <name>esc:swap_tilde</name>
+          <description>Swap with Tilde (like Sun Unix keyboard)</description>
+        </configItem>
+      </option>
+    </group>
+    <group allowMultipleSelection="true">
+	  <!-- remapping escape -->
+      <configItem>
+        <name>fk1x</name>
+        <description>Function Keys 13..15</description>
+      </configItem>
+      <option>
+        <configItem>
+          <name>fk13:print</name>
+          <description>Function Key 13 sends Print</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>fk14:screensaver</name>
+          <description>Function Key 14 sends Screensaver</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>fk15:power</name>
+          <description>Function Key 15 sends Suspend/Power/Hibernate/PowerOff</description>
+        </configItem>
+      </option>
+    </group>
   </optionList>
 </xkbConfigRegistry>
