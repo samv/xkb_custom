@@ -260,7 +260,7 @@ If you want to load the US layout and the Italian variant run these commands:
 
 ## Keycaps
 
-![A picture of a 104-key keyboard with a colorful set of key caps, with the main set of letters having up to 4 symbols shown, the unusual ones in green, the same color as the "Alternate Group" (AltGr) key](mac-hip-keycaps.png)
+![A picture of a 104-key keyboard with a colorful set of key caps, with the main set of letters having up to 4 symbols shown, the unusual ones in green, the same color as the "Alternate Group" (AltGr) key](mac-hip-keycaps.jpg)
 
 The 'mac' and 'mac-hip' keycap set are available by sending the
 'wasd-pc104-mac.svg' or 'wasd-pc104-mac-hip.svg' files to
