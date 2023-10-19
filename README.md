@@ -1,4 +1,4 @@
-# Italian layout variant based on US Dvorak layout for Kinesis Advantage
+# Customizing your Linux keymap without `xkbcomp`
 
 This repository provides a _US variant_ layout for XKB that supports Italians deadkeys (i.e. vowels with diacritics) especially meant for [Kinesis Advantage keyboard](http://www.kinesis-ergo.com/shop/advantage-for-pc-mac/).
 
@@ -47,14 +47,27 @@ So that you can roll back any time with this command sequence:
     rm -fR xkb
     tar zxf previous-xkb.tgz
 
-### In case of trouble
+If you couldn't find the file, or something still doesn't work, you can try re-installing
+the package that delivers that file.  On Debian/Ubuntu, you query that package with `dpkg -S
+PATH` and then `apt reinstall PACKAGE` will reinstall for you.
 
-If you have already modified your `/usr/share/X11/xkb` and you don't trust it anymore and you have lost your `previous-xkb.tgz` you can try to replace the xkb configuration directory with the xkb-original.tgz file that you can see in this repo (taken from a Debian testing - September 2017):
-
-    su -
-    cd /usr/share/X11/
-    rm -fR xkb
-    tar zxf {path}/xkb-original.tgz
+    $ dpkg -S /usr/share/X11/xkb
+    xkb-data: /usr/share/X11/xkb
+    $ sudo apt reinstall xkb-data
+    Reading package lists... Done
+    Building dependency tree... Done
+    Reading state information... Done
+    0 upgraded, 0 newly installed, 1 reinstalled, 0 to remove and 5 not upgraded.
+    Need to get 392 kB of archives.
+    After this operation, 0 B of additional disk space will be used.
+    Get:1 http://www.gtlib.gatech.edu/pub/ubuntu noble/main amd64 xkb-data all 2.38-2 [392 kB]
+    Fetched 392 kB in 0s (6,429 kB/s)
+    (Reading database ... 462397 files and directories currently installed.)
+    Preparing to unpack .../xkb-data_2.38-2_all.deb ...
+    Unpacking xkb-data (2.38-2) over (2.38-2) ...
+    Setting up xkb-data (2.38-2) ...
+    Processing triggers for man-db (2.12.0-3) ...
+    $
 
 ## Install
 
@@ -77,12 +90,6 @@ diacritics required for the Italian language.
 For the mac-hip layout:
 
      setxkbmap -layout us -model pc104 -variant mac-hip -option "lv3:ralt_switch,numpad:mac"
-
-## Keycaps
-
-The 'mac' and 'mac-hip' keycap set are available by sending the
-'wasd-pc104-mac.svg' or 'wasd-pc104-mac-hip.svg' files to
-wasdkeyboards.com' see [SVG Layout Tutorials](https://support.wasdkeyboards.com/hc/en-us/articles/115009403848-Intro-to-Custom-Layouts)
 
 ## Typing vowels using diacritic deadkeys
 
@@ -205,9 +212,10 @@ mac-hip undeadens the ñ and leaves ç as it is;
 * AltGr+J: produces capital delta (∆), not a increment (∆) as on MacOS and 'mac'
 
 * **Fractions mappings**: 'mac-hip' has mappings for all fractions of eight, which reduce to
-  quarters and one half when they are even.  Somehow, my hip mac layout I designed in 2015 matches
-  the 'mac' Linux layout for ¼, ½ and ¾.  I'm not sure how that coincidence happened unless this was
-  the standard mapping in an earlier version of Mac OS.  They are listed here in numerical order:
+  quarters and one half when they are even.  Somehow, @samv's hip mac layout from 2015
+  matches the 'mac' Linux layout for ¼, ½ and ¾.  I'm not sure how that coincidence happened
+  unless this was the standard mapping in an earlier version of Mac OS.  They are listed
+  here in numerical order:
 
   * AltGr+Z: produces one eighth (⅛), not a cedilla (¸) as Mac or a dead cedilla (for making ç) as on Linux 'mac'
 
@@ -249,6 +257,16 @@ If you want to load the US layout and the Italian variant run these commands:
 
     setxkbmap -model kinesis -layout us,us -variant ,kinesis_adv_dvorak_it -option
     setxkbmap -model kinesis -layout us,us -variant ,kinesis_adv_dvorak_it -option "lv3:rwin_switch,grp:alt_space_toggle"
+
+## Keycaps
+
+The 'mac' and 'mac-hip' keycap set are available by sending the
+'wasd-pc104-mac.svg' or 'wasd-pc104-mac-hip.svg' files to
+wasdkeyboards.com' see [SVG Layout Tutorials](https://support.wasdkeyboards.com/hc/en-us/articles/115009403848-Intro-to-Custom-Layouts)
+
+The 'wasd-pc104-mac' file has not yet had its text converted to strokes as is required for
+final mastering of the keycaps.  This should allow for easier editing if you feel inspired
+to print yourself a set of keycaps.
 
 ## Test and run
 
