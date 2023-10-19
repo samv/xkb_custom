@@ -260,13 +260,16 @@ If you want to load the US layout and the Italian variant run these commands:
 
 ## Keycaps
 
+![A picture of a 104-key keyboard with a colorful set of key caps, with the main set of letters having up to 4 symbols shown, the unusual ones in green, the same color as the "Alternate Group" (AltGr) key](mac-hip-keycaps.png)
+
 The 'mac' and 'mac-hip' keycap set are available by sending the
 'wasd-pc104-mac.svg' or 'wasd-pc104-mac-hip.svg' files to
 wasdkeyboards.com' see [SVG Layout Tutorials](https://support.wasdkeyboards.com/hc/en-us/articles/115009403848-Intro-to-Custom-Layouts)
 
-The 'wasd-pc104-mac' file has not yet had its text converted to strokes as is required for
-final mastering of the keycaps.  This should allow for easier editing if you feel inspired
-to print yourself a set of keycaps.
+To change the image on your own set, edit the 'wasd-pc104-mac' file, which has not yet had
+its text converted to strokes as is required for final mastering of the keycaps.  So, edit
+that file and then find the option in your SVG editor (Inkscape, right?) to convert text to
+strokes before sending it to WASD.
 
 ## Test and run
 
