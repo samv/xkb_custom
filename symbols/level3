@@ -9,6 +9,7 @@ xkb_symbols "ralt_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
   };
+  modifier_map Mod5 { <RALT> };
 };
 
 // The right Alt key never chooses the third level.
@@ -21,7 +22,8 @@ xkb_symbols "ralt_alt" {
     type[Group1]="TWO_LEVEL",
     symbols[Group1] = [ Alt_R, Meta_R ]
   };
-  modifier_map Mod1 { <RALT> };
+  modifier_map Mod5 { <RWIN> };
+  modifier_map Mod5 { <RALT> };
 };
 
 // The right Alt key (while pressed) chooses the third shift level,
@@ -32,6 +34,7 @@ xkb_symbols "ralt_switch_multikey" {
     type[Group1]="TWO_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift, Multi_key ]
   };
+  modifier_map Mod5 { <RALT> };
 };
 
 // Either Alt key (while pressed) chooses the third shift level.
@@ -49,6 +52,7 @@ xkb_symbols "lalt_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
   };
+  modifier_map Mod5 { <LALT> };
 };
 
 // The right Ctrl key (while pressed) chooses the third shift level.
@@ -58,6 +62,7 @@ xkb_symbols "switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
   };
+  modifier_map Mod5 { <RCTL> };
 };
 
 // The Menu key (while pressed) chooses the third shift level.
@@ -67,6 +72,7 @@ xkb_symbols "menu_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
   };
+  modifier_map Mod5 { <MENU> };
 };
 
 // Either Win key (while pressed) chooses the third shift level.
@@ -83,6 +89,7 @@ xkb_symbols "lwin_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
   };
+  modifier_map Mod5 { <LWIN> };
 };
 
 // The right Win key (while pressed) chooses the third shift level.
@@ -92,6 +99,7 @@ xkb_symbols "rwin_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
   };
+  modifier_map Mod5 { <RWIN> };
 };
 
 // The Enter key on the kepypad (while pressed) chooses the third shift level.
@@ -102,6 +110,7 @@ xkb_symbols "enter_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
   };
+  modifier_map Mod5 { <KPEN> };
 };
 
 // The CapsLock key (while pressed) chooses the third shift level.
@@ -111,6 +120,7 @@ xkb_symbols "caps_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
   };
+  modifier_map Mod5 { <CAPS> };
 };
 
 // The Backslash key (while pressed) chooses the third shift level.
@@ -120,6 +130,7 @@ xkb_symbols "bksl_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
   };
+  modifier_map Mod5 { <BKSL> };
 };
 
 // The Less/Greater key (while pressed) chooses the third shift level.
@@ -129,6 +140,7 @@ xkb_symbols "lsgt_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
   };
+  modifier_map Mod5 { <LTGT> };
 };
 
 // The CapsLock key (while pressed) chooses the third shift level,
@@ -139,6 +151,7 @@ xkb_symbols "caps_switch_latch" {
     type[Group1]="THREE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Latch ]
   };
+  modifier_map Mod5 { <CAPS> };
 };
 
 // The Backslash key (while pressed) chooses the third shift level,
@@ -149,6 +162,7 @@ xkb_symbols "bksl_switch_latch" {
     type[Group1]="THREE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Latch ]
   };
+  modifier_map Mod5 { <BKSL> };
 };
 
 // The Less/Greater key (while pressed) chooses the third shift level,
@@ -159,6 +173,7 @@ xkb_symbols "lsgt_switch_latch" {
     type[Group1]="THREE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Latch ]
   };
+  modifier_map Mod5 { <LSGT> };
 };
 
 // Number key 4 chooses third shift level when pressed in isolation.

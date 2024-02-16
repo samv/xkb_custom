@@ -33,8 +33,8 @@ default xkb_keycodes "evdev" {
 	<AD08> = 31; //{i I}
 	<AD09> = 32; //{o O}
 	<AD10> = 33; //{p P}
-	<AD11> = 34;
-	<AD12> = 35;
+	<AD11> = 34; //{bracketleft braceleft}
+	<AD12> = 35; //{bracketright braceright}
 	<BKSL> = 51; //{\ |}
 	alias <AC12> = <BKSL>;
 
@@ -50,6 +50,7 @@ default xkb_keycodes "evdev" {
 	<AC09> = 46; //{l L}
 	<AC10> = 47; //{; :}
 	<AC11> = 48; //{' "}
+    <RTRN> = 36;
 
 	<LFSH> = 50; //{Shift L}
 	<AB01> = 52; //{z Z}
@@ -67,13 +68,11 @@ default xkb_keycodes "evdev" {
 	<LCTL> = 37;
 	<LWIN> = 133;
 	<LALT> = 64;
-	<LCTL> = 37;
 	<SPCE> = 65; //{Space}
-	<RCTL> = 105;
 	<RALT> = 108;
-	alias <ALGR> = <RALT>;
+	alias <ALGR> = <RALT>; // Alternate Group of keys
 	<RWIN> = 134;
-	<COMP> = 135;
+	<COMP> = 135; //{Compose}
 	alias <MENU> = <COMP>;
 	<RCTL> = 105;
 

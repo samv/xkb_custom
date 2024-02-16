@@ -27,7 +27,9 @@ xkb_symbols "hyper_capscontrol" {
     replace key <CAPS> { [ Control_L ] };
     replace key <LCTL> { [ Hyper_L ] };
     modifier_map Control { <CAPS> };
-    modifier_map  Mod4 { <LCTL> };
+    // put Hyper in Mod3, with Level 5 switch - otherwise it blurs with Meta/Super
+    modifier_map  Mod3 { <LCTL> };
+    modifier_map  Mod3 { <HYPR> };
 };
 
 // Move Ctrl to the leftmost key on the middle row and CapsLock to the
