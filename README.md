@@ -1,6 +1,20 @@
 # Customizing your Linux keymap without `xkbcomp`
 
-This repository provides a _US variant_ layout for XKB that supports Italians deadkeys (i.e. vowels with diacritics) especially meant for [Kinesis Advantage keyboard](http://www.kinesis-ergo.com/shop/advantage-for-pc-mac/).
+This repository contains two worked, real examples for how to do key-by-key mapping of your
+layout using the XKB system, in a way that works with all the native keyboard mapping
+configuration.
+
+One example keyboard is the 'us-mac' keymap, here brought to life with custom keycaps from
+WASD keyboards:
+
+![A picture of a 104-key keyboard with a colorful set of key caps, with the main set of letters having up to 4 symbols shown, the unusual ones in green, the same color as the "Alternate Group" (AltGr) key](mac-hip-keycaps.jpg)
+
+There are some customizations to the layout from standard 'us-mac'; this repo shows you how
+to go through the rest.
+
+This repository also provides a _US variant_ layout that supports Italians deadkeys
+(i.e. vowels with diacritics) especially meant for [Kinesis Advantage
+keyboard](http://www.kinesis-ergo.com/shop/advantage-for-pc-mac/).
 
 This is the original Dvorak US layout:
 
@@ -10,11 +24,18 @@ and this is the Dvorak US layout with Italian variant:
 
 ![Kinesis Advantage Dvorak US layout Italian variant](http://drive.google.com/uc?id=0B8TPut6hfwH0WUNxZkxnV3ptVFE)
 
-Even if everything in this repository is meant for Kinesis Advantage, I'm sure that you can learn from here everything you need to build, remap and customize your own keyboard layout for Linux.
+The original author wrote of this:
 
-If you need some help to understand better how all the parts are working, please have a look at [my guide on Medium.com](https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450#.gnyfmp6y4)
+> I'm sure that you can learn from here everything you need to build, remap and customize your
+> own keyboard layout for Linux.
 
-## Pre-Install
+And so, I did!
+
+If you need some help to understand better how all the parts are working, please have a look
+at [his guide on Medium.com](https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450#.gnyfmp6y4) 
+or file a question as a documentation bug/wishlist issue against this repo!
+
+## Pre-Installation safety backup
 
 In these instructions, we will be modifying files in your OS directories.  This isn't ideal
 for a few reasons:
@@ -40,7 +61,11 @@ Run a backup of your current `/usr/share/X11/xkb` configuration directory
     cd /usr/share/X11/
     tar zcf previous-xkb.tgz xkb
 
-So that you can roll back any time with this command sequence:
+So that you can roll back any time.
+
+### Rolling back all changes
+
+You can use this command sequence to restore the backup made in the previous section:
 
     su -
     cd /usr/share/X11/
@@ -75,7 +100,7 @@ Copy the files on top of the files in your Xorg; for instance, on Debian/Ubuntu:
 
     git clone git@github.com:samv/xkb_custom.git
     cd xkb_custom
-    sudo cp -fR [a-z]* /usr/share/X11/xkb/
+    sudo cp -fR geometry keycodes rules symbols /usr/share/X11/xkb/
 
 Once you have done this, you can change your keyboard layout using the regular
 configurations in Gnome Control Center (and gnome-tweaks), or using the command-line
@@ -101,7 +126,7 @@ For the mac-hip layout:
     git clone git@github.com:damko/xkb_kinesis_advantage_dvorak_layout.git
     cd xkb_kinesis_advantage_dvorak_layout
     git checkout hack
-    sudo cp -fR * /usr/share/X11/xkb/
+    sudo cp -fR geometry keycodes rules symbols /usr/share/X11/xkb/
 
 These commands will apply the changes:
 
@@ -260,7 +285,20 @@ If you want to load the US layout and the Italian variant run these commands:
 
 ## Keycaps
 
-![A picture of a 104-key keyboard with a colorful set of key caps, with the main set of letters having up to 4 symbols shown, the unusual ones in green, the same color as the "Alternate Group" (AltGr) key](mac-hip-keycaps.jpg)
+  Once installed, this
+specific layout with the "Escape" in the Unix keyboard position
+and Control left of "A" can be achieved with:
+
+     setxkbmap -layout us -model pc104 -variant mac-hip -option \
+         "lv3:rwin_switch,compose:ralt,ctrl:swapcaps_hyper,numpad:mac,esc:swap_tilde"
+
+This keyboard has DIP switches to enter Mac mode, which swaps
+"Alt" and "Win" and makes PrintScreen through Pause enter
+F13..F15.  I have this set, so I add the `fk13` through `fk15`
+options added in this repo, and switch up `lv3:`  and `compose:`.
+
+     setxkbmap -layout us -model pc104 -variant mac-hip -option \
+         "lv3:ralt_switch,compose:rwin,ctrl:swapcaps_hyper,numpad:mac,esc:swap_tilde,fk13:print,fk14:screensaver,fk15:power"
 
 The 'mac' and 'mac-hip' keycap set are available by sending the
 'wasd-pc104-mac.svg' or 'wasd-pc104-mac-hip.svg' files to
