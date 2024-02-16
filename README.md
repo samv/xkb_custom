@@ -2,11 +2,45 @@
 
 This repository provides a _US variant_ layout for XKB that supports Italians deadkeys (i.e. vowels with diacritics) especially meant for [Kinesis Advantage keyboard](http://www.kinesis-ergo.com/shop/advantage-for-pc-mac/).
 
+This is the original Dvorak US layout:
+
+![Kinesis Advantage Dvorak US layout](http://drive.google.com/uc?id=0B8TPut6hfwH0ei1GS3ZkSGxpSVk)
+
+and this is the Dvorak US layout with Italian variant:
+
+![Kinesis Advantage Dvorak US layout Italian variant](http://drive.google.com/uc?id=0B8TPut6hfwH0WUNxZkxnV3ptVFE)
+
 Even if everything in this repository is meant for Kinesis Advantage, I'm sure that you can learn from here everything you need to build, remap and customize your own keyboard layout for Linux.
 
 If you need some help to understand better how all the parts are working, please have a look at [my guide on Medium.com](https://medium.com/@damko/a-simple-humble-but-comprehensive-guide-to-xkb-for-linux-6f1ad5e13450#.gnyfmp6y4)
 
 ## Install
+
+### Before installing this repo
+
+Run a backup of your current `/usr/share/X11/xkb` configuration directory
+
+    su -
+    cd /usr/share/X11/
+    tar zcf previous-xkb.tgz xkb
+
+So that you can roll back any time with this command:
+
+    su -
+    cd /usr/share/X11/
+    rm -fR xkb
+    tar zxf previous-xkb.tgz
+
+### In case of troubles
+
+If you have already modified your `/usr/share/X11/xkb` and you don't trust it anymore and you have lost your `previous-xkb.tgz` you can try to replace the xkb configuration directory with the xkb-original.tgz file that you can see in this repo (taken from a Debian testing - September 2017:
+
+    su -
+    cd /usr/share/X11/
+    rm -fR xkb
+    tar zxf {path}/xkb-original.tgz
+
+### Now you can install
 
 Be aware that this repository has two branches:
 
@@ -92,7 +126,3 @@ Test your layout by typing some text and, if everything is working as expected, 
     XKBOPTIONS="lv3:rwin_switch,grp:alt_space_toggle"
 
 Reboot your machine, run again `setxkbmap -print -verbose 10` and test again by typing some text. Everything should work as expected.
-
-## Similar projects
-
-* SmartLayer's [math layout](https://github.com/SmartLayer/MathLingua-Layout) for XKB 
