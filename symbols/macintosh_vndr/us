@@ -116,7 +116,7 @@ xkb_symbols "oldmac" {
     modifier_map Shift  { Shift_L, Shift_R };
     modifier_map Lock   { Caps_Lock };
     modifier_map Control{ Control_L, Control_R };
-    modifier_map Mod2   { Num_Lock };
+    // modifier_map Mod2   { Num_Lock };
 
     //  Fake keys for virtual<->real modifier mappings:
     key <LVL3> {	[ ISO_Level3_Shift	]	};
@@ -132,7 +132,7 @@ xkb_symbols "oldmac" {
     modifier_map Mod1   { <META> };
 
     key <SUPR> {	[ NoSymbol, Super_L	]	};
-    modifier_map Mod4   { <SUPR> };
+    modifier_map Mod2   { <SUPR> };
 
     key <HYPR> {	[ NoSymbol, Hyper_L	]	};
     modifier_map Mod4   { <HYPR> };

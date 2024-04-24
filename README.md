@@ -290,7 +290,7 @@ specific layout with the "Escape" in the Unix keyboard position
 and Control left of "A" can be achieved with:
 
      setxkbmap -layout us -model pc104 -variant mac-hip -option \
-         "lv3:rwin_switch,compose:ralt,ctrl:swapcaps_hyper,numpad:mac,esc:swap_tilde"
+         "lv3:rwin_switch,compose:ralt,ctrl:hyper_capscontrol,numpad:mac,esc:swap_tilde"
 
 This keyboard has DIP switches to enter Mac mode, which swaps
 "Alt" and "Win" and makes PrintScreen through Pause enter
@@ -298,7 +298,7 @@ F13..F15.  I have this set, so I add the `fk13` through `fk15`
 options added in this repo, and switch up `lv3:`  and `compose:`.
 
      setxkbmap -layout us -model pc104 -variant mac-hip -option \
-         "lv3:ralt_switch,compose:rwin,ctrl:swapcaps_hyper,numpad:mac,esc:swap_tilde,fk13:print,fk14:screensaver,fk15:power"
+         "lv3:ralt_switch,compose:rwin,ctrl:hyper_capscontrol,numpad:mac,esc:swap_tilde,fk13:print,fk14:screensaver,fk15:power"
 
 The 'mac' and 'mac-hip' keycap set are available by sending the
 'wasd-pc104-mac.svg' or 'wasd-pc104-mac-hip.svg' files to

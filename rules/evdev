@@ -926,6 +926,10 @@
   grp:ralt_rshift_toggle	= +group(ralt_rshift_toggle)
   grp:alt_shift_toggle		= +group(alt_shift_toggle)
   grp:alt_shift_toggle_bidir	= +group(alt_shift_toggle_bidir)
+  esc:swap_tilde   =   +esc(swap_tilde)
+  fk13:print   =   +fk13(print)
+  fk14:screensaver   =   +fk14(screensaver)
+  fk15:power   =   +fk15(power)
 
 ! option		=	compat
   grp_led:num		=	+lednum(group_lock)
@@ -946,3 +950,4 @@
   numpad:microsoft		=	+numpad(microsoft)
   numpad:shift3			=	+numpad(shift3)
   custom:types			=	+custom
+
