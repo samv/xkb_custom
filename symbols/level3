@@ -1,5 +1,5 @@
-// These partial variants assign ISO_Level3_Shift to various XKB keycodes
-// so that the third shift level can be reached.
+// These variants assign ISO_Level3_Shift to various keys
+// so that levels 3 and 4 can be reached.
 
 // The default behaviour:
 // the right Alt key (AltGr) chooses the third symbol engraved on a key.
@@ -133,6 +133,12 @@ xkb_symbols "bksl_switch" {
   modifier_map Mod5 { <BKSL> };
 };
 
+// The AC11 key (while pressed) chooses the third shift level.
+partial modifier_keys
+xkb_symbols "ac11_switch" {
+  key <AC11> {[  ISO_Level3_Shift  ], type[Group1]="ONE_LEVEL" };
+};
+
 // The Less/Greater key (while pressed) chooses the third shift level.
 partial modifier_keys
 xkb_symbols "lsgt_switch" {
@@ -176,18 +182,14 @@ xkb_symbols "lsgt_switch_latch" {
   modifier_map Mod5 { <LSGT> };
 };
 
-// Number key 4 chooses third shift level when pressed in isolation.
+// Top-row digit key 4 chooses third shift level when pressed alone.
 partial modifier_keys
 xkb_symbols "4_switch_isolated" {
-  override key <AE04> {
-    symbols[Group1] = [ ISO_Level3_Shift ]
-  };
+  override key <AE04> {[  ISO_Level3_Shift  ]};
 };
 
-// Number key 9 chooses third shift level when pressed in isolation.
+// Top-row digit key 9 chooses third shift level when pressed alone.
 partial modifier_keys
 xkb_symbols "9_switch_isolated" {
-  override key <AE09> {
-    symbols[Group1] = [ ISO_Level3_Shift ]
-  };
+  override key <AE09> {[  ISO_Level3_Shift  ]};
 };
