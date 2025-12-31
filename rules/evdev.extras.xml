@@ -220,12 +220,6 @@
         </variant>
         <variant>
           <configItem popularity="exotic">
-            <name>noted</name>
-            <description>German (Noted)</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem popularity="exotic">
             <name>ru-recom</name>
             <!-- Keyboard indicator for Russian layouts -->
             <shortDescription>ru</shortDescription>
@@ -291,6 +285,20 @@
             <name>oldhunlig</name>
             <shortDescription>oldhun(lig)</shortDescription>
             <description>Old Hungarian (for ligatures)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem popularity="exotic">
+            <name>oldhun_sk_sh</name>
+            <shortDescription>oldhun(SK,Sh)</shortDescription>
+            <description>Old Hungarian (Carpathian Highlands, S as Sh)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem popularity="exotic">
+            <name>oldhun_sk_sz</name>
+            <shortDescription>oldhun(SK,Sz)</shortDescription>
+            <description>Old Hungarian (Carpathian Highlands, S as Sz)</description>
           </configItem>
         </variant>
         <variant>

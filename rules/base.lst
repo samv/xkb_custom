@@ -44,7 +44,6 @@
   chicony0108     Chicony KU-0108
   chicony0420     Chicony KU-0420
   chromebook      Chromebook
-  classmate       Classmate PC
   compalfl90      Compal FL90
   armada          Compaq Armada laptop
   compaqeak8      Compaq Easy Access
@@ -77,7 +76,6 @@
   geniuskkb2050hs Genius KKB-2050HS
   gyration        Gyration
   hhk             Happy Hacking
-  macintosh_hhk   Happy Hacking for Mac
   hpi6            Hewlett-Packard Internet
   hpmini110       Hewlett-Packard Mini 110 laptop
   hpnx9020        Hewlett-Packard nx9020
@@ -121,10 +119,6 @@
   logiinkseusb    Logitech iTouch Internet Navigator SE USB
   logiultrax      Logitech Ultra-X
   logiultraxc     Logitech Ultra-X Cordless Media Desktop
-  macbook78       MacBook/MacBook Pro
-  macbook79       MacBook/MacBook Pro (intl.)
-  macintosh       Macintosh
-  macintosh_old   Macintosh Old
   mx1998          Memorex MX1998
   mx2500          Memorex MX2500 EZ-Access
   mx2750          Memorex MX2750
@@ -806,10 +800,15 @@
   grp:ctrl_shift_toggle Ctrl+Shift
   grp:lctrl_lshift_toggle Left Ctrl+Left Shift
   grp:rctrl_rshift_toggle Right Ctrl+Right Shift
+  grp:ctrl_shift_toggle_bidir Left Ctrl+Left Shift chooses previous layout, Right Ctrl + Right Shift chooses next layout
   grp:ctrl_alt_toggle  Alt+Ctrl
+  grp:lctrl_lalt_toggle Left Alt+Left Ctrl
+  grp:rctrl_ralt_toggle Right Alt+Right Ctrl
+  grp:ctrl_alt_toggle_bidir Left Ctrl+Left Alt chooses previous layout, Right Ctrl + Right Alt chooses next layout
   grp:alt_shift_toggle Alt+Shift
   grp:lalt_lshift_toggle Left Alt+Left Shift
   grp:ralt_rshift_toggle Right Alt+Right Shift
+  grp:alt_shift_toggle_bidir Left Alt+Left Shift chooses previous layout, Right Alt + Right Shift chooses next layout
   grp:menu_toggle      Menu
   grp:lwin_toggle      Left Win
   grp:alt_space_toggle Alt+Space
@@ -847,10 +846,12 @@
   ctrl:nocaps          Caps Lock as Ctrl
   ctrl:lctrl_meta      Left Ctrl as Meta
   ctrl:swapcaps        Swap Ctrl and Caps Lock
+  ctrl:grouptoggle_capscontrol Caps Lock as Ctrl,  Left Control switches to another layout
   ctrl:hyper_capscontrol Caps Lock as Ctrl, Ctrl as Hyper
   ctrl:ac_ctrl         To the left of "A"
   ctrl:aa_ctrl         At the bottom left
   ctrl:rctrl_ralt      Right Ctrl as Right Alt
+  ctrl:ralt_rctrl      Right Alt as Right Control
   ctrl:menu_rctrl      Menu as Right Ctrl
   ctrl:swap_lalt_lctl  Swap Left Alt with Left Ctrl
   ctrl:swap_ralt_rctl  Swap Right Alt with Right Ctrl
@@ -896,7 +897,8 @@
   caps:hyper           Make Caps Lock an additional Hyper
   caps:menu            Make Caps Lock an additional Menu key
   caps:numlock         Make Caps Lock an additional Num Lock
-  caps:ctrl_modifier   Make Caps Lock an additional Ctrl
+  caps:ctrl_modifier   Make Caps Lock act as an additional Ctrl modifier, but keep identifying as Caps Lock
+  caps:digits_row      Caps Lock gives digits on the digits row (Azerty layouts)
   caps:none            Caps Lock is disabled
   altwin               Alt and Win behavior
   altwin:menu          Add the standard behavior to Menu key
@@ -938,6 +940,7 @@
   numpad:mac           Numeric keypad always enters digits (as in macOS)
   numpad:microsoft     Num Lock on: digits; Shift for arrows. Num Lock off: arrows (as in Windows)
   numpad:shift3        Shift does not cancel Num Lock, chooses 3rd level instead
+  scrolllock:mod3      Map Scroll Lock to Mod3
   srvrkeys:none        Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server
   apple:alupckeys      Apple Aluminium emulates Pause, PrtSc, Scroll Lock
   apple:jp_oadg109a    Japanese Apple keyboards emulate OADG109A backslash
@@ -952,22 +955,13 @@
   grab:break_actions   Allow breaking grabs with keyboard actions (warning: security risk)
   grab:debug           Allow grab and window tree logging
   currencysign         Currency signs
-  eurosign:e           Euro on E
+  eurosign:e           Euro on E, third level
+  eurosign:E           Euro on E, fourth level
   eurosign:2           Euro on 2
   eurosign:4           Euro on 4
   eurosign:5           Euro on 5
   rupeesign:4          Rupee on 4
   lv5                  Key to choose the 5th level
-  lv5:caps_switch      Caps Lock chooses 5th level
-  lv5:lsgt_switch      The "&lt; &gt;" key chooses 5th level
-  lv5:ralt_switch      Right Alt chooses 5th level
-  lv5:menu_switch      Menu chooses 5th level
-  lv5:rctrl_switch     Right Ctrl chooses 5th level
-  lv5:lsgt_switch_lock The "&lt; &gt;" key chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser
-  lv5:ralt_switch_lock Right Alt chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser
-  lv5:lwin_switch_lock Left Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser
-  lv5:rwin_switch_lock Right Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser
-  lv5:lsgt_switch_lock_cancel The "&lt; &gt;" key chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser
   lv5:caps_switch      Caps Lock chooses 5th level
   lv5:lsgt_switch      The "&lt; &gt;" key chooses 5th level
   lv5:ralt_switch      Right Alt chooses 5th level
